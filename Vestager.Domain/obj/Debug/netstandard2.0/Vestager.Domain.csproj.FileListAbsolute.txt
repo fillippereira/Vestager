@@ -1,0 +1,8 @@
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Domain\bin\Debug\netstandard2.0\Vestager.Domain.deps.json
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Domain\bin\Debug\netstandard2.0\Vestager.Domain.dll
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Domain\bin\Debug\netstandard2.0\Vestager.Domain.pdb
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Domain\obj\Debug\netstandard2.0\Vestager.Domain.AssemblyInfoInputs.cache
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Domain\obj\Debug\netstandard2.0\Vestager.Domain.AssemblyInfo.cs
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Domain\obj\Debug\netstandard2.0\Vestager.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Domain\obj\Debug\netstandard2.0\Vestager.Domain.dll
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Domain\obj\Debug\netstandard2.0\Vestager.Domain.pdb

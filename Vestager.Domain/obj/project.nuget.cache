@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Xqq7+poJwVUAYTQqJsKMtliZ2WmyR2QUh21glbNFFS5UNf1M3LDJiTyfDKMV/g4HE/jasr3JzAho20Udj3gn2g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Fillip Pereira\\Desktop\\Vestager\\Vestager.Domain\\Vestager.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Fillip Pereira\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,12 @@
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Infra\obj\Debug\netstandard2.1\Vestager.Infra.csprojAssemblyReference.cache
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Infra\obj\Debug\netstandard2.1\Vestager.Infra.AssemblyInfoInputs.cache
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Infra\obj\Debug\netstandard2.1\Vestager.Infra.AssemblyInfo.cs
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Infra\bin\Debug\netstandard2.1\Vestager.Infra.deps.json
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Infra\bin\Debug\netstandard2.1\Vestager.Infra.dll
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Infra\bin\Debug\netstandard2.1\Vestager.Infra.pdb
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Infra\obj\Debug\netstandard2.1\Vestager.Infra.csproj.CoreCompileInputs.cache
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Infra\obj\Debug\netstandard2.1\Vestager.Infra.dll
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Infra\obj\Debug\netstandard2.1\Vestager.Infra.pdb
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Infra\bin\Debug\netstandard2.1\Vestager.Domain.dll
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Infra\bin\Debug\netstandard2.1\Vestager.Domain.pdb
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Infra\obj\Debug\netstandard2.1\Vestager.Infra.csproj.CopyComplete

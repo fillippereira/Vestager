@@ -1,0 +1,4 @@
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Infra\obj\Debug\netstandard2.0\Vestager.Infra.csprojAssemblyReference.cache
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Infra\obj\Debug\netstandard2.0\Vestager.Infra.AssemblyInfoInputs.cache
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Infra\obj\Debug\netstandard2.0\Vestager.Infra.AssemblyInfo.cs
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Infra\obj\Debug\netstandard2.0\Vestager.Infra.csproj.CoreCompileInputs.cache
