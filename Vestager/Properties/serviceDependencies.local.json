@@ -3,6 +3,14 @@
     "mssql1": {
       "type": "mssql.local",
       "connectionId": "ContextConnection"
+    },
+    "mssql2": {
+      "type": "mssql.local",
+      "connectionId": "ApplicationContextConnection"
+    },
+    "mssql3": {
+      "type": "mssql.local",
+      "connectionId": "AppDBContextConnection"
     }
   }
 }

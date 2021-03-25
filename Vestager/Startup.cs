@@ -5,9 +5,17 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Vestager.Domain.Entities;
+using Vestager.Domain.Interfaces.Repositories;
+using Vestager.Domain.Interfaces.UnitOfWork;
+using Vestager.Infra.Data;
+using Vestager.Infra.Repositories;
+using Vestager.Infra.UnitOfWork;
 
 namespace Vestager
 {
@@ -23,8 +31,13 @@ namespace Vestager
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<Context>(c => c.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddIdentity<Usuario, IdentityRole>().AddEntityFrameworkStores<Context>();
+
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
