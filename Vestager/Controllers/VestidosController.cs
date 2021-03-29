@@ -2,27 +2,33 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Vestager.Domain.Constants;
 using Vestager.Domain.Entities;
+using Vestager.Domain.Interfaces.UnitOfWork;
 using Vestager.Infra.Data;
+using Vestager.MVC.Models;
 
 namespace Vestager.MVC.Controllers
 {
     public class VestidosController : Controller
     {
-        private readonly Context _context;
+        private readonly IMapper _mapper;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public VestidosController(Context context)
+        public VestidosController(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            _context = context;
+            _mapper = mapper;
+            _unitOfWork = unitOfWork;
         }
-
+      
         // GET: Vestidos
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Vestidos.ToListAsync());
+            return View(await _unitOfWork.Vestidos.GetAllAsync());
         }
 
         // GET: Vestidos/Details/5
@@ -33,7 +39,7 @@ namespace Vestager.MVC.Controllers
                 return NotFound();
             }
 
-            var vestido = await _context.Vestidos
+            var vestido = await _unitOfWork.Vestidos
                 .FirstOrDefaultAsync(m => m.VestidoID == id);
             if (vestido == null)
             {
@@ -54,26 +60,28 @@ namespace Vestager.MVC.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("VestidoID,Nome,Cor,Tamanho,Descricao")] Vestido vestido)
+        public async Task<IActionResult> Create(VestidoViewModel vestidoViewModel)
         {
+            
             if (ModelState.IsValid)
             {
-                _context.Add(vestido);
-                await _context.SaveChangesAsync();
+                Vestido vestido = _mapper.Map<Vestido>(vestidoViewModel);
+                _unitOfWork.Vestidos.Add(vestido);
+                await _unitOfWork.SaveAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(vestido);
+            return View();
         }
 
         // GET: Vestidos/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int id)
         {
-            if (id == null)
+            if (id == 0)
             {
                 return NotFound();
             }
 
-            var vestido = await _context.Vestidos.FindAsync(id);
+            var vestido = await _unitOfWork.Vestidos.GetByIdAsync(id);
             if (vestido == null)
             {
                 return NotFound();
@@ -97,8 +105,8 @@ namespace Vestager.MVC.Controllers
             {
                 try
                 {
-                    _context.Update(vestido);
-                    await _context.SaveChangesAsync();
+                    _unitOfWork.Vestidos.Update(vestido);
+                    await _unitOfWork.SaveAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -124,7 +132,7 @@ namespace Vestager.MVC.Controllers
                 return NotFound();
             }
 
-            var vestido = await _context.Vestidos
+            var vestido = await _unitOfWork.Vestidos
                 .FirstOrDefaultAsync(m => m.VestidoID == id);
             if (vestido == null)
             {
@@ -139,15 +147,15 @@ namespace Vestager.MVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var vestido = await _context.Vestidos.FindAsync(id);
-            _context.Vestidos.Remove(vestido);
-            await _context.SaveChangesAsync();
+            var vestido = await _unitOfWork.Vestidos.GetByIdAsync(id);
+            _unitOfWork.Vestidos.Remove(vestido);
+            await _unitOfWork.SaveAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool VestidoExists(int id)
         {
-            return _context.Vestidos.Any(e => e.VestidoID == id);
+            return _unitOfWork.Vestidos.Any(e => e.VestidoID == id);
         }
     }
 }

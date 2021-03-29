@@ -1,31 +1,56 @@
 ﻿@model RegisterViewModel
+@{
+    Layout = "_LayoutLogin";
+}
+<div class="container h-100 ">
+    <div class="row h-100 justify-content-center d-flex align-items-center min-vh-100">
+        <div class="col-md-4">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+                <div class="card-body">
+                    <section>
+                        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <img src="~/images/logo.png" class="img-fluid" alt="Responsive image">
+                                </div>
+                            </div>
+                            <br />
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="Email"></label>
+                                <input asp-for="Email" class="form-control" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Password"></label>
+                                <input asp-for="Password" class="form-control" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ConfirmPassword"></label>
+                                <input asp-for="ConfirmPassword" class="form-control" />
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            </div><div class="form-group">
+                                <button type="submit" class="btn btn-outline-secondary w-100">Cadastrar</button>
+                            </div>
+                            <div class="form-group text-center text-muted">
+                                <p>
+                                    Já possui um conta?<a asp-controller="Account" asp-action="Login"> Realizar login</a>
+                                </p>
+                            </div>
+                        </form>
+                    </section>
 
 
-<div class="row">
-    <div class="col-md-4">
-        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h4>Create a new account.</h4>
-            <hr />
-            <div asp-validation-summary="All" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Email"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+                    <div class="row mt-5">
+                        <div class="col-12 text-center text-muted">
+                            <span>© 2021 - Vestager </span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Password"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ConfirmPassword"></label>
-                <input asp-for="ConfirmPassword" class="form-control" />
-                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-            </div>
-            <button type="submit" class="btn btn-primary">Register</button>
-        </form>
+        </div>
     </div>
-
 </div>
 
 @section Scripts {

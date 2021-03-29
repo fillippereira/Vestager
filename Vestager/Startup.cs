@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,12 +11,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Vestager.Domain.Constants;
 using Vestager.Domain.Entities;
 using Vestager.Domain.Interfaces.Repositories;
 using Vestager.Domain.Interfaces.UnitOfWork;
 using Vestager.Infra.Data;
 using Vestager.Infra.Repositories;
 using Vestager.Infra.UnitOfWork;
+using Vestager.MVC.Models;
 
 namespace Vestager
 {
@@ -38,6 +41,27 @@ namespace Vestager
             services.AddRazorPages();
 
             services.AddTransient<IUnitOfWork, UnitOfWork>();
+
+
+            var config = new AutoMapper.MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Vestido, VestidoViewModel>()
+                .IncludeAllDerived();
+
+
+                cfg.CreateMap<VestidoViewModel, Vestido>()
+                    .ConstructUsing(vm =>
+                        vm.TipoVestido == VestidoConstantes.VESTIDO_LONGO ? (Vestido)new VestidoLongo() : (Vestido)new VestidoCurto()
+                    );
+
+
+
+
+            });
+            IMapper mapper = config.CreateMapper();
+            services.AddSingleton(mapper);
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

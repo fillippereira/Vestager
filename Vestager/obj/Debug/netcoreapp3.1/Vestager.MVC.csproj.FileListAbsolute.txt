@@ -218,6 +218,11 @@ C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\obj\Debug\netcoreapp3.1\Razor\
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\obj\Debug\netcoreapp3.1\Razor\Views\Vestidos\Edit.cshtml.g.cs
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\obj\Debug\netcoreapp3.1\Razor\Views\Vestidos\Index.cshtml.g.cs
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\obj\Debug\netcoreapp3.1\Vestager.MVC.csproj.CoreCompileInputs.cache
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\obj\Debug\netcoreapp3.1\Vestager.MVC.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\obj\Debug\netcoreapp3.1\Vestager.MVC.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Footer.cshtml.g.cs
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Header.cshtml.g.cs
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutLogin.cshtml.g.cs
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Menu.cshtml.g.cs

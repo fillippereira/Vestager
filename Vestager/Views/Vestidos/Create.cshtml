@@ -1,4 +1,4 @@
-﻿@model Vestager.Domain.Entities.Vestido
+﻿@model Vestager.MVC.Models.VestidoViewModel
 
 @{
     ViewData["Title"] = "Create";
@@ -24,13 +24,29 @@
             </div>
             <div class="form-group">
                 <label asp-for="Tamanho" class="control-label"></label>
-                <input asp-for="Tamanho" class="form-control" />
+                <select asp-for="Tamanho" class="form-control">
+                    <option>P</option>
+                    <option>M</option>
+                    <option>G</option>
+                    <option>GG</option>
+                </select>
                 <span asp-validation-for="Tamanho" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Descricao" class="control-label"></label>
                 <input asp-for="Descricao" class="form-control" />
                 <span asp-validation-for="Descricao" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="TipoVestido" class="control-label"></label>
+                <select asp-for="TipoVestido" class="form-control">
+                    <option value="@Vestager.Domain.Constants.VestidoConstantes.VESTIDO_LONGO">Vestido Longo</option>
+                    <option value="@Vestager.Domain.Constants.VestidoConstantes.VESTIDO_CURTO">Vestido Curto</option>
+                </select>
+
+
+
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

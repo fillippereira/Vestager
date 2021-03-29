@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
@@ -15,6 +16,9 @@ namespace Vestager.Domain.Entities
         public string Tamanho { get; set; }
         public string Descricao { get; set; }
         public abstract string GetCaracteristicas();
+
+        [DisplayName("Tipo Vestido")]
+        public abstract string TipoVestido { get;  }
     }
 
     public class VestidoLongo : Vestido
@@ -23,12 +27,28 @@ namespace Vestager.Domain.Entities
         {
             return "Barra longa";
         }
+        public override string TipoVestido
+        {
+            get
+            {
+                return "Vestido Longo";
+
+            }
+        }
     }
     public class VestidoCurto : Vestido
     {
         public override string GetCaracteristicas()
         {
             return "Barra Curta";
+        }
+        public override string TipoVestido
+        {
+            get
+            {
+                return "Vestido Curto";
+
+            }
         }
     }
 }

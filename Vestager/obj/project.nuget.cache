@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "WVEyp06mPQXkCTsiVHbWb4lLXWXPKb+cZOs4mcKNQXN/jJTyq3+Rv5RPha3zGiJLDFPXrz6nV2n07vIUDQSMMQ==",
+  "dgSpecHash": "hgMiLyZ3AGlhgsIkUu3JpOx/4/znh/IzDvzYZlvCjYWF04M57Yuwrbehh/pNKRYu2rFDEVKyCwdY44PBDPOSVw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Fillip Pereira\\Desktop\\Vestager\\Vestager\\Vestager.MVC.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Fillip Pereira\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Fillip Pereira\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Fillip Pereira\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\Fillip Pereira\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
@@ -151,7 +152,7 @@
     "C:\\Users\\Fillip Pereira\\.nuget\\packages\\system.private.datacontractserialization\\4.3.0\\system.private.datacontractserialization.4.3.0.nupkg.sha512",
     "C:\\Users\\Fillip Pereira\\.nuget\\packages\\system.private.uri\\4.3.2\\system.private.uri.4.3.2.nupkg.sha512",
     "C:\\Users\\Fillip Pereira\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
-    "C:\\Users\\Fillip Pereira\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
+    "C:\\Users\\Fillip Pereira\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\Fillip Pereira\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
     "C:\\Users\\Fillip Pereira\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
     "C:\\Users\\Fillip Pereira\\.nuget\\packages\\system.reflection.extensions\\4.3.0\\system.reflection.extensions.4.3.0.nupkg.sha512",
