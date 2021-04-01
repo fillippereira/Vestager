@@ -37,31 +37,20 @@ namespace Vestager
             services.AddDbContext<Context>(c => c.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddIdentity<Usuario, IdentityRole>().AddEntityFrameworkStores<Context>();
 
-            services.AddControllersWithViews();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages();
 
             services.AddTransient<IUnitOfWork, UnitOfWork>();
 
-
-            var config = new AutoMapper.MapperConfiguration(cfg =>
+            var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<Vestido, VestidoViewModel>()
                 .IncludeAllDerived();
 
-
-                cfg.CreateMap<VestidoViewModel, Vestido>()
-                    .ConstructUsing(vm =>
-                        vm.TipoVestido == VestidoConstantes.VESTIDO_LONGO ? (Vestido)new VestidoLongo() : (Vestido)new VestidoCurto()
-                    );
-
-
-
-
+                cfg.CreateMap<VestidoViewModel, Vestido>().ConstructUsing(vm => vm.TipoVestido == VestidoConstantes.VESTIDO_LONGO ? (Vestido)new VestidoLongo() : (Vestido)new VestidoCurto());
             });
             IMapper mapper = config.CreateMapper();
             services.AddSingleton(mapper);
-
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

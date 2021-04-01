@@ -8,11 +8,15 @@
     @if (SignInManager.IsSignedIn(User))
     {
         <li class="nav-item">
+            <a class="nav-link"> <i class="fas fa-bell text-dark notification"><span class="badge badge-danger badge-pill">1</span></i></a>           
+        </li>
+
+        <li class="nav-item">
             <a id="manage" class="nav-link text-dark" asp-controller="Account" asp-action="Manage" title="Manage">Hello @UserManager.GetUserName(User)!</a>
         </li>
         <li class="nav-item">
-            <form id="logoutForm" class="form-inline" asp-controller="Account" asp-action="Logout" >
-                <button id="logout" type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+            <form id="logoutForm" class="form-inline" asp-controller="Account" asp-action="Logout">
+                <button id="logout" type="submit" class="nav-link btn btn-link text-dark"><i class="fas fa-power-off"></i></button>
             </form>
         </li>
     }

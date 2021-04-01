@@ -186,13 +186,19 @@ namespace Vestager.Infra.Migrations
                     b.Property<string>("Bairro")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CEP")
-                        .HasColumnType("int");
+                    b.Property<string>("CEP")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CPF")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Celular")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Cidade")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Complemento")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
@@ -208,6 +214,9 @@ namespace Vestager.Infra.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Nome")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Numero")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RG")

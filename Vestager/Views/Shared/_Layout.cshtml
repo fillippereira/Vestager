@@ -6,6 +6,10 @@
     <title>@ViewData["Title"] - Vestager</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css">
+   
+    
+
 </head>
 <body class="h-100" style="height:83%!important">
     <partial name="Header" />
@@ -14,8 +18,8 @@
             <div class="col-sm-4 col-md-3 col-lg-2 h-100">
                 <partial name="Menu" />
             </div>
-            <div class="col-sm-8 col-md-9 col-lg-8 h-100">
-                <main role="main" class="pb-3">
+            <div class="col-sm-8 col-md-9 col-lg-10 h-100">
+                <main role="main" class="pb-3 h-100">
 
                     @RenderBody()
                 </main>
@@ -27,6 +31,9 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src='https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js'></script>
+    <script src="~/js/ViaCep.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

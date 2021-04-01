@@ -54,7 +54,7 @@ namespace Vestager.MVC.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("UserID,Nome,Nascimento,Sexo,Telefone,RG,CPF,Email,Endereco,Bairro,Cidade,Estado,CEP")] Cliente cliente)
+        public async Task<IActionResult> Create(Cliente cliente)
         {
             if (ModelState.IsValid)
             {
