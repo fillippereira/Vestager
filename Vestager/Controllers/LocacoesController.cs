@@ -50,7 +50,7 @@ namespace Vestager.MVC.Controllers
         public IActionResult Create()
         {
             ViewData["UserID"] = new SelectList(_context.Clientes, "UserID", "UserID");
-            ViewData["VestidoID"] = new SelectList(_context.Vestidos, "VestidoID", "Discriminator");
+            ViewData["VestidoID"] = new SelectList(_context.Vestidos, "VestidoID", "VestidoID");
             return View();
         }
 

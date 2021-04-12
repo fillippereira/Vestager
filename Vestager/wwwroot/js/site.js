@@ -1,11 +1,9 @@
 ﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
-// Write your JavaScript code.
 
 $(document).ready(function () {
     $('.table').DataTable({
-
         "language": {
             "search": "Pesquisar:",
             "zeroRecords": "Nenhum resultado encontrado",
@@ -22,4 +20,28 @@ $(document).ready(function () {
             }
         }
     });
+
+    function readURL(input) {
+        var url = input.value;
+        var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+        if (input.files && input.files[0] && (ext == "gif" || ext == "png" || ext == "jpeg" || ext == "jpg")) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#previewImagem').attr('src', e.target.result);
+                $('#lblImagemVestido').html(url.split('\\')[2]);
+                $('#UrlVestido').val(url.split('\\')[2]);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        } else {
+            $('#previewImagem').attr('src', '~/images/nenhuma_imagem.jpg');
+        }
+    }
+
+    $("#imagemVestido").change(function () {
+        readURL(this);
+    });
 });
+
+

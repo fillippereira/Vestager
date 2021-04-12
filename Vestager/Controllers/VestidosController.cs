@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -60,14 +62,27 @@ namespace Vestager.MVC.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(VestidoViewModel vestidoViewModel)
+        public async Task<IActionResult> Create(VestidoViewModel vestidoViewModel, IFormFile imagemVestido)
         {
             
             if (ModelState.IsValid)
             {
-                Vestido vestido = _mapper.Map<Vestido>(vestidoViewModel);
-                _unitOfWork.Vestidos.Add(vestido);
-                await _unitOfWork.SaveAsync();
+                if (imagemVestido == null || imagemVestido.Length == 0)
+                {
+                    return Content("file not selected");
+                }
+                var path = Path.Combine(
+                            Directory.GetCurrentDirectory(), $"{CaminhoConstantes.APP_DATA}\\{CaminhoConstantes.VESTIDOS}",
+                            imagemVestido.FileName);
+
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    await imagemVestido.CopyToAsync(stream);
+                    Vestido vestido = _mapper.Map<Vestido>(vestidoViewModel);
+                   _unitOfWork.Vestidos.Add(vestido);
+                    await _unitOfWork.SaveAsync();
+                }
+               
                 return RedirectToAction(nameof(Index));
             }
             return View();

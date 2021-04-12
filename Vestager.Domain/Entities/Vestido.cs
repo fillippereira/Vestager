@@ -15,6 +15,9 @@ namespace Vestager.Domain.Entities
         public string  Cor { get; set; }
         public string Tamanho { get; set; }
         public string Descricao { get; set; }
+        public double PrecoSugerido { get; set; }
+        public string UrlVestido { get; set; }
+
         public abstract string GetCaracteristicas();
 
         [DisplayName("Tipo Vestido")]

@@ -83,6 +83,7 @@ namespace Vestager.Infra.Migrations
                     Cor = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Tamanho = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PrecoSugerido = table.Column<double>(type: "float", nullable: false),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>

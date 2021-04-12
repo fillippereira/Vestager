@@ -10,8 +10,8 @@ using Vestager.Infra.Data;
 namespace Vestager.Infra.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20210331025742_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20210412024150_AtualizacaoVestido")]
+    partial class AtualizacaoVestido
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -377,7 +377,13 @@ namespace Vestager.Infra.Migrations
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<double>("PrecoSugerido")
+                        .HasColumnType("float");
+
                     b.Property<string>("Tamanho")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UrlVestido")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("VestidoID");

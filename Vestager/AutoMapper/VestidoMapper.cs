@@ -1,11 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using AutoMapper;
+using Vestager.Domain.Entities;
+using Vestager.MVC.Models;
 
 namespace Vestager.MVC.AutoMapper
 {
-    public class VestidoMapper
+    public class AutoMapperConfig
     {
+        public static void RegisterMappings()
+        {
+
+        }
     }
+
+
 }
