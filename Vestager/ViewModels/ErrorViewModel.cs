@@ -1,6 +1,6 @@
 using System;
 
-namespace Vestager.Models
+namespace Vestager.ViewModels
 {
     public class ErrorViewModel
     {

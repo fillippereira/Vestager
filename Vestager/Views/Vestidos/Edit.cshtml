@@ -4,43 +4,77 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
-
-<h4>Vestido</h4>
+<h2>Editar Vestido</h2>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="VestidoID" />
-            <div class="form-group">
-                <label asp-for="Nome" class="control-label"></label>
-                <input asp-for="Nome" class="form-control" />
-                <span asp-validation-for="Nome" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Cor" class="control-label"></label>
-                <input asp-for="Cor" class="form-control" />
-                <span asp-validation-for="Cor" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Tamanho" class="control-label"></label>
-                <input asp-for="Tamanho" class="form-control" />
-                <span asp-validation-for="Tamanho" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Descricao" class="control-label"></label>
-                <input asp-for="Descricao" class="form-control" />
-                <span asp-validation-for="Descricao" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Salvar" class="btn btn-success" />
-                <a class="btn btn-primary" asp-action="Index">Voltar</a>
-            </div>
-        </form>
-    </div>
-</div>
+<form asp-action="Edit" enctype="multipart/form-data">
+    <div class="row h-100">
+        <div class="col-4 text-center">
+            <img src=@string.Concat("/Vestidos/", Model.UrlVestido)
+                 alt="Preview imagem" id="previewImagem" class="img-thumbnail img-responsive ">
+        </div>
+        <div class="col-8">
+            <div class="row">
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="VestidoID" />
+                <div class="form-group col-12">
+                    <label asp-for="Nome" class="control-label"></label>
+                    <input asp-for="Nome" class="form-control" />
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+                <div class="form-group col-12">
+                    <label asp-for="Cor" class="control-label"></label>
+                    <input asp-for="Cor" class="form-control" />
+                    <span asp-validation-for="Cor" class="text-danger"></span>
+                </div>
+                <div class="form-group col-4">
+                    <label asp-for="Tamanho" class="control-label"></label>
+                    <select asp-for="Tamanho" class="form-control">
+                        <option>P</option>
+                        <option>M</option>
+                        <option>G</option>
+                        <option>GG</option>
+                    </select>
+                    <span asp-validation-for="Tamanho" class="text-danger"></span>
+                </div>
+                <div class="form-group col-4">
+                    <label asp-for="PrecoSugerido" class="control-label"></label>
+                    <input asp-for="PrecoSugerido" class="form-control" />
+                    <span asp-validation-for="PrecoSugerido" class="text-danger"></span>
+                </div>
+                <div class="form-group col-4">
+                    <label asp-for="TipoVestido" class="control-label"></label>
+                    <select asp-for="TipoVestido" class="form-control">
+                        <option value="@Vestager.Domain.Constants.VestidoConstantes.VESTIDO_LONGO">Vestido Longo</option>
+                        <option value="@Vestager.Domain.Constants.VestidoConstantes.VESTIDO_CURTO">Vestido Curto</option>
+                    </select>
+                </div>
+                <div class="form-group col-12">
+                    <label asp-for="Descricao" class="control-label"></label>
+                    <textarea asp-for="Descricao" rows="4" class="form-control"></textarea>
+                    <span asp-validation-for="Descricao" class="text-danger"></span>
+                </div>
+                <div class="form-group custom-file col-12 mb-3">
+                    <div class="col-12">
+                        <input type="file" class="custom-file-input" name="imagemVestido" id="imagemVestido">
+                        <label class="custom-file-label" for="customFile" id="lblImagemVestido">
+                            @if (string.IsNullOrEmpty(Model.UrlVestido))
+                            {
+                                WriteLiteral("Selecione a imagem");
+                            }
+                            else
+                            {
+                                @Model.UrlVestido;
+                            }
+                        </label>
+                    </div>
+                </div>
+                <input type="hidden" asp-for="UrlVestido" id="UrlVestido" class="form-control" />
+                <div class="form-group col-12">
+                    <input type="submit" value="Salvar" class="btn btn-success" />
+                    <a class="btn btn-primary" asp-action="Index">Voltar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

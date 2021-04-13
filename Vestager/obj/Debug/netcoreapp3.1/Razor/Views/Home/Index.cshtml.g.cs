@@ -21,13 +21,13 @@ using Vestager;
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\Views\_ViewImports.cshtml"
-using Vestager.Models;
+using Vestager.ViewModels;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"99464617055fdb505bb0bb7fd91f9b14f7b0d030", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9f9fd2ee5ce83e3cad73a224d68187941d48dac8", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"68ae18a993133e59db937119d1bafc1b3f23d3b0", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

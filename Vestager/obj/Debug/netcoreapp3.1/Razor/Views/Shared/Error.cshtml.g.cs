@@ -21,13 +21,13 @@ using Vestager;
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\Views\_ViewImports.cshtml"
-using Vestager.Models;
+using Vestager.ViewModels;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d6a5625cc8fb4476f348b0fe9041c550465d8bf9", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9f9fd2ee5ce83e3cad73a224d68187941d48dac8", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"68ae18a993133e59db937119d1bafc1b3f23d3b0", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     {
         #pragma warning disable 1998

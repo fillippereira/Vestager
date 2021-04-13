@@ -26,7 +26,7 @@ namespace Vestager.MVC.Controllers
             _mapper = mapper;
             _unitOfWork = unitOfWork;
         }
-      
+
         // GET: Vestidos
         public async Task<IActionResult> Index()
         {
@@ -64,7 +64,7 @@ namespace Vestager.MVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(VestidoViewModel vestidoViewModel, IFormFile imagemVestido)
         {
-            
+
             if (ModelState.IsValid)
             {
                 if (imagemVestido == null || imagemVestido.Length == 0)
@@ -72,17 +72,17 @@ namespace Vestager.MVC.Controllers
                     return Content("file not selected");
                 }
                 var path = Path.Combine(
-                            Directory.GetCurrentDirectory(), $"{CaminhoConstantes.APP_DATA}\\{CaminhoConstantes.VESTIDOS}",
+                            Directory.GetCurrentDirectory(), $"{CaminhoConstantes.ROOT}\\{CaminhoConstantes.VESTIDOS}",
                             imagemVestido.FileName);
 
                 using (var stream = new FileStream(path, FileMode.Create))
                 {
                     await imagemVestido.CopyToAsync(stream);
                     Vestido vestido = _mapper.Map<Vestido>(vestidoViewModel);
-                   _unitOfWork.Vestidos.Add(vestido);
+                    _unitOfWork.Vestidos.Add(vestido);
                     await _unitOfWork.SaveAsync();
                 }
-               
+
                 return RedirectToAction(nameof(Index));
             }
             return View();
@@ -109,9 +109,9 @@ namespace Vestager.MVC.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("VestidoID,Nome,Cor,Tamanho,Descricao")] Vestido vestido)
+        public async Task<IActionResult> Edit(int id, VestidoViewModel vestidoViewModel, IFormFile imagemVestido)
         {
-            if (id != vestido.VestidoID)
+            if (id != vestidoViewModel.VestidoID)
             {
                 return NotFound();
             }
@@ -120,12 +120,26 @@ namespace Vestager.MVC.Controllers
             {
                 try
                 {
-                    _unitOfWork.Vestidos.Update(vestido);
-                    await _unitOfWork.SaveAsync();
+                    if (imagemVestido == null || imagemVestido.Length == 0)
+                    {
+                        return Content("file not selected");
+                    }
+                    var path = Path.Combine(
+                                Directory.GetCurrentDirectory(), $"{CaminhoConstantes.ROOT}\\{CaminhoConstantes.VESTIDOS}",
+                                imagemVestido.FileName);
+
+                    using (var stream = new FileStream(path, FileMode.Create))
+                    {
+                        await imagemVestido.CopyToAsync(stream);
+                        Vestido vestido = _mapper.Map<Vestido>(vestidoViewModel);
+
+                        _unitOfWork.Vestidos.Update(vestido);
+                        await _unitOfWork.SaveAsync();
+                    }
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!VestidoExists(vestido.VestidoID))
+                    if (!VestidoExists(vestidoViewModel.VestidoID))
                     {
                         return NotFound();
                     }
@@ -136,7 +150,7 @@ namespace Vestager.MVC.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(vestido);
+            return View(vestidoViewModel);
         }
 
         // GET: Vestidos/Delete/5

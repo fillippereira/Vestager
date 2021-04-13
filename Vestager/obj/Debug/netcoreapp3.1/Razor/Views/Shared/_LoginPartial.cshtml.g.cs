@@ -21,7 +21,7 @@ using Vestager;
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\Views\_ViewImports.cshtml"
-using Vestager.Models;
+using Vestager.ViewModels;
 
 #line default
 #line hidden
@@ -41,7 +41,7 @@ using Vestager.Domain.Entities;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d15fc561ffbfb72e55613d3a0ad1a6c179b50ba8", @"/Views/Shared/_LoginPartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9f9fd2ee5ce83e3cad73a224d68187941d48dac8", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"68ae18a993133e59db937119d1bafc1b3f23d3b0", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__LoginPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("id", new global::Microsoft.AspNetCore.Html.HtmlString("manage"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -94,7 +94,7 @@ using Vestager.Domain.Entities;
 #nullable disable
             WriteLiteral("        <li class=\"nav-item\">\r\n            <a class=\"nav-link\"> <i class=\"fas fa-bell text-dark notification\"><span class=\"badge badge-danger badge-pill\">1</span></i></a>           \r\n        </li>\r\n");
             WriteLiteral("        <li class=\"nav-item\">\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d15fc561ffbfb72e55613d3a0ad1a6c179b50ba88319", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d15fc561ffbfb72e55613d3a0ad1a6c179b50ba88323", async() => {
                 WriteLiteral("Hello ");
 #nullable restore
 #line 15 "C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\Views\Shared\_LoginPartial.cshtml"
@@ -123,7 +123,7 @@ using Vestager.Domain.Entities;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n        </li>\r\n        <li class=\"nav-item\">\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d15fc561ffbfb72e55613d3a0ad1a6c179b50ba810348", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d15fc561ffbfb72e55613d3a0ad1a6c179b50ba810352", async() => {
                 WriteLiteral("\r\n                <button id=\"logout\" type=\"submit\" class=\"nav-link btn btn-link text-dark\"><i class=\"fas fa-power-off\"></i></button>\r\n            ");
             }
             );
@@ -155,7 +155,7 @@ using Vestager.Domain.Entities;
 #line hidden
 #nullable disable
             WriteLiteral("        <li class=\"nav-item\">\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d15fc561ffbfb72e55613d3a0ad1a6c179b50ba812589", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d15fc561ffbfb72e55613d3a0ad1a6c179b50ba812593", async() => {
                 WriteLiteral("Register");
             }
             );
@@ -175,7 +175,7 @@ using Vestager.Domain.Entities;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n        </li>\r\n        <li class=\"nav-item\">\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d15fc561ffbfb72e55613d3a0ad1a6c179b50ba814183", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d15fc561ffbfb72e55613d3a0ad1a6c179b50ba814187", async() => {
                 WriteLiteral("Login");
             }
             );

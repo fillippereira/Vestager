@@ -8,6 +8,7 @@ namespace Vestager.MVC.Models
 {
     public class VestidoViewModel
     {   
+        public int VestidoID { get; set; }
         public string Nome { get; set; }
         public string Cor { get; set; }
         public string Tamanho { get; set; }

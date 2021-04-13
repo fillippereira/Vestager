@@ -6,7 +6,7 @@ namespace Vestager.Domain.Constants
 {
     public class CaminhoConstantes
     {
-        public const string APP_DATA = "App_Data";
+        public const string ROOT = "wwwroot";
         public const string VESTIDOS = "Vestidos";
 
     }

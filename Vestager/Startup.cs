@@ -47,7 +47,7 @@ namespace Vestager
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddSingleton<IFileProvider>(
             new PhysicalFileProvider(
-                Path.Combine(Directory.GetCurrentDirectory(), CaminhoConstantes.APP_DATA)));
+                Path.Combine(Directory.GetCurrentDirectory(), CaminhoConstantes.ROOT)));
 
             var config = new MapperConfiguration(cfg =>
             {
