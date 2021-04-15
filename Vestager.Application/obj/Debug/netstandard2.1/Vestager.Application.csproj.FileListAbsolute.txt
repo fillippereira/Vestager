@@ -1,0 +1,12 @@
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Application\bin\Debug\netstandard2.1\Vestager.Application.deps.json
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Application\bin\Debug\netstandard2.1\Vestager.Application.dll
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Application\bin\Debug\netstandard2.1\Vestager.Application.pdb
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Application\obj\Debug\netstandard2.1\Vestager.Application.csprojAssemblyReference.cache
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Application\obj\Debug\netstandard2.1\Vestager.Application.AssemblyInfoInputs.cache
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Application\obj\Debug\netstandard2.1\Vestager.Application.AssemblyInfo.cs
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Application\obj\Debug\netstandard2.1\Vestager.Application.dll
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Application\obj\Debug\netstandard2.1\Vestager.Application.pdb
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Application\bin\Debug\netstandard2.1\Vestager.Domain.dll
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Application\bin\Debug\netstandard2.1\Vestager.Domain.pdb
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Application\obj\Debug\netstandard2.1\Vestager.Application.csproj.CoreCompileInputs.cache
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager.Application\obj\Debug\netstandard2.1\Vestager.Application.csproj.CopyComplete

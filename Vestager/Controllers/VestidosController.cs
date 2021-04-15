@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Vestager.Application.Services;
 using Vestager.Domain.Constants;
 using Vestager.Domain.Entities;
 using Vestager.Domain.Interfaces.UnitOfWork;
@@ -71,13 +72,9 @@ namespace Vestager.MVC.Controllers
                 {
                     return Content("file not selected");
                 }
-                var path = Path.Combine(
-                            Directory.GetCurrentDirectory(), $"{CaminhoConstantes.ROOT}\\{CaminhoConstantes.VESTIDOS}",
-                            imagemVestido.FileName);
 
-                using (var stream = new FileStream(path, FileMode.Create))
+                if (ArquivoService.AdicionarArquivo(imagemVestido, CaminhoConstantes.VESTIDOS))
                 {
-                    await imagemVestido.CopyToAsync(stream);
                     Vestido vestido = _mapper.Map<Vestido>(vestidoViewModel);
                     _unitOfWork.Vestidos.Add(vestido);
                     await _unitOfWork.SaveAsync();
@@ -124,15 +121,12 @@ namespace Vestager.MVC.Controllers
                     {
                         return Content("file not selected");
                     }
-                    var path = Path.Combine(
-                                Directory.GetCurrentDirectory(), $"{CaminhoConstantes.ROOT}\\{CaminhoConstantes.VESTIDOS}",
-                                imagemVestido.FileName);
 
-                    using (var stream = new FileStream(path, FileMode.Create))
+                    ArquivoService.RemoverArquivo(_unitOfWork.Vestidos.GetById(vestidoViewModel.VestidoID).UrlVestido, CaminhoConstantes.VESTIDOS);
+
+                    if (ArquivoService.AdicionarArquivo(imagemVestido, CaminhoConstantes.VESTIDOS))
                     {
-                        await imagemVestido.CopyToAsync(stream);
                         Vestido vestido = _mapper.Map<Vestido>(vestidoViewModel);
-
                         _unitOfWork.Vestidos.Update(vestido);
                         await _unitOfWork.SaveAsync();
                     }
@@ -161,8 +155,9 @@ namespace Vestager.MVC.Controllers
                 return NotFound();
             }
 
-            var vestido = await _unitOfWork.Vestidos
-                .FirstOrDefaultAsync(m => m.VestidoID == id);
+            var vestido = await _unitOfWork.Vestidos.FirstOrDefaultAsync(m => m.VestidoID == id);
+            ArquivoService.RemoverArquivo(vestido.UrlVestido, CaminhoConstantes.VESTIDOS);
+
             if (vestido == null)
             {
                 return NotFound();

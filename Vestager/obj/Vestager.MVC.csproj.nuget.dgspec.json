@@ -4,6 +4,68 @@
     "C:\\Users\\Fillip Pereira\\Desktop\\Vestager\\Vestager\\Vestager.MVC.csproj": {}
   },
   "projects": {
+    "C:\\Users\\Fillip Pereira\\Desktop\\Vestager\\Vestager.Application\\Vestager.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Fillip Pereira\\Desktop\\Vestager\\Vestager.Application\\Vestager.Application.csproj",
+        "projectName": "Vestager.Application",
+        "projectPath": "C:\\Users\\Fillip Pereira\\Desktop\\Vestager\\Vestager.Application\\Vestager.Application.csproj",
+        "packagesPath": "C:\\Users\\Fillip Pereira\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Fillip Pereira\\Desktop\\Vestager\\Vestager.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Fillip Pereira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "C:\\Users\\Fillip Pereira\\Desktop\\Vestager\\Vestager.Domain\\Vestager.Domain.csproj": {
+                "projectPath": "C:\\Users\\Fillip Pereira\\Desktop\\Vestager\\Vestager.Domain\\Vestager.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\Fillip Pereira\\Desktop\\Vestager\\Vestager.Domain\\Vestager.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -173,6 +235,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "C:\\Users\\Fillip Pereira\\Desktop\\Vestager\\Vestager.Application\\Vestager.Application.csproj": {
+                "projectPath": "C:\\Users\\Fillip Pereira\\Desktop\\Vestager\\Vestager.Application\\Vestager.Application.csproj"
+              },
               "C:\\Users\\Fillip Pereira\\Desktop\\Vestager\\Vestager.Domain\\Vestager.Domain.csproj": {
                 "projectPath": "C:\\Users\\Fillip Pereira\\Desktop\\Vestager\\Vestager.Domain\\Vestager.Domain.csproj"
               },

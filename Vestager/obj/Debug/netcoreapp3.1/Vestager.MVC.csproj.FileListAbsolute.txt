@@ -256,7 +256,6 @@ C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\M
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Connections.dll
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.dll
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Extensions.dll
-C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HttpOverrides.dll
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HttpsPolicy.dll
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Identity.dll
@@ -382,7 +381,6 @@ C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\S
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\System.IO.FileSystem.Watcher.dll
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\System.IO.IsolatedStorage.dll
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\System.IO.MemoryMappedFiles.dll
-C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\System.IO.Pipelines.dll
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\System.IO.Pipes.dll
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\System.IO.UnmanagedMemoryStream.dll
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\System.Linq.dll
@@ -422,7 +420,6 @@ C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\S
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\System.Resources.Reader.dll
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\System.Resources.ResourceManager.dll
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\System.Resources.Writer.dll
-C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\System.Runtime.CompilerServices.VisualC.dll
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\System.Runtime.dll
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\refs\System.Runtime.Extensions.dll
@@ -491,3 +488,8 @@ C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\Micros
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\obj\Debug\netcoreapp3.1\Vestager.MVC.csproj.CoreCompileInputs.cache
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\obj\Debug\netcoreapp3.1\Vestager.MVC.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\obj\Debug\netcoreapp3.1\Vestager.MVC.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\Vestager.Application.dll
+C:\Users\Fillip Pereira\Desktop\Vestager\Vestager\bin\Debug\netcoreapp3.1\Vestager.Application.pdb

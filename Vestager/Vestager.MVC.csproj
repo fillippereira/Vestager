@@ -18,16 +18,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Vestager.Application\Vestager.Application.csproj" />
     <ProjectReference Include="..\Vestager.Domain\Vestager.Domain.csproj" />
     <ProjectReference Include="..\Vestager.Infra\Vestager.Infra.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\Vestidos\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\Vestidos\vestido_marsala.jpg" />
   </ItemGroup>
 
 </Project>
